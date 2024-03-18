@@ -34,7 +34,7 @@ const DetailsModal = ({ onClose, isOpen, entry, data }) => {
           {hourDataList.map((d, i) => (
             <div
               key={i}
-              className=' flex flex-col justify-between gap-2 items-center text-xs font-semibold '
+              className=' flex flex-col justify-between items-center text-xs font-semibold '
             >
               <p>{d.dt_txt}</p>
               <WeatherIcon iconName={d.weather[0].icon} />
