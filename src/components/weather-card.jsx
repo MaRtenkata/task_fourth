@@ -1,6 +1,5 @@
 import WeatherIcon from './weather-icon';
 import { WiHumidity } from 'react-icons/wi';
-import { MdOutlineVisibility } from 'react-icons/md';
 import { FiSunrise } from 'react-icons/fi';
 import { FiSunset } from 'react-icons/fi';
 import { WiBarometer } from 'react-icons/wi';
@@ -48,11 +47,6 @@ const WeatherCard = memo(function WeatherCard(props) {
           <p className='text-md'>Humidity</p>
           <WiHumidity className='text-5xl text-blue-300' />
           <p className='text-xl'>{entry.main.humidity}%</p>
-        </div>
-        <div className='flex items-center justify-center flex-col px-4'>
-          <p className='text-md'>Visibility</p>
-          <MdOutlineVisibility className='text-5xl 00' />
-          <p className='text-xl'>{entry.visibility}km</p>
         </div>
         <div className='flex items-center justify-center flex-col px-4'>
           <p className='text-md'>Pressure</p>
