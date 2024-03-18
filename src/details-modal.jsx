@@ -8,11 +8,16 @@ const DetailsModal = ({ onClose, isOpen, entry, data }) => {
     return entryDate === entry.dt_txt.split(' ').shift();
   });
 
+  const dayOfWeek = new Date(entry.dt * 1000).toLocaleString('en-US', {
+    weekday: 'long',
+  });
+
   if (!isOpen) return null;
   return (
     <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'>
       <div className=' bg-white p-8 mx-10 rounded-lg shadow-lg'>
         <div className=' flex flex-col px-4 items-center'>
+          <h1 className='text-2xl'>{dayOfWeek}</h1>
           <span className='text-5xl'>{entry.main.temp}°</span>
           <p className='text-xs space-x-1 '>
             <span> Feels like</span>
