@@ -21,7 +21,7 @@ To use the app:
     REACT_APP_API_KEY=YOUR_API_KEY
 ```
 
-5. Run `npm start` to start the dev server
+5. Run `npm run dev` to start the dev server
 
 The app should now be running on http://localhost:5173
 
