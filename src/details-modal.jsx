@@ -11,7 +11,7 @@ const DetailsModal = ({ onClose, isOpen, entry, data }) => {
   if (!isOpen) return null;
   return (
     <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'>
-      <div className=' bg-white p-8 rounded shadow-lg'>
+      <div className=' bg-white p-8 mx-10 rounded-lg shadow-lg'>
         <div className=' flex flex-col px-4 items-center'>
           <span className='text-5xl'>{entry.main.temp}°</span>
           <p className='text-xs space-x-1 '>
@@ -30,13 +30,13 @@ const DetailsModal = ({ onClose, isOpen, entry, data }) => {
             </span>
           </p>
         </div>
-        <div className='mt-5 flex gap-10  overflow-x-auto w-full justify-between pr-3'>
+        <div className='mt-5 flex gap-10 justify-between pr-3'>
           {hourDataList.map((d, i) => (
             <div
               key={i}
               className=' flex flex-col justify-between gap-2 items-center text-xs font-semibold '
             >
-              <p>{d.dt_txt.split(' ').shift()}</p>
+              <p>{d.dt_txt}</p>
               <WeatherIcon iconName={d.weather[0].icon} />
               <p>{d.main.temp}°</p>
             </div>

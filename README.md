@@ -1,8 +1,36 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a weather app built with React, Tailwind CSS, Zustand, react-query, and axios. It fetches weather data from the OpenWeatherMap API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 5 day forecast displayed showing predicted high/low temps and weather conditions
+
+- Search for weather data by city name
+
+## Usage
+
+To use the app:
+
+1. Clone the repo
+2. Run `npm install`
+3. Get an API key from [OpenWeatherMap](https://openweathermap.org/api)
+4. Create a `.env` file and add your API key like:
+
+```
+    REACT_APP_API_KEY=YOUR_API_KEY
+```
+
+5. Run `npm start` to start the dev server
+
+The app should now be running on http://localhost:5173
+
+## Built With
+
+- [React](https://reactjs.org/) - Front-end framework
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Zustand](https://github.com/pmndrs/zustand) - State management
+- [react-query](https://react-query.tanstack.com/) - Data fetching
+- [axios](https://github.com/axios/axios) - HTTP client
+- [Vite](https://vitejs.dev/) - Build tool
+- [OpenWeatherMap API](https://openweathermap.org/api) - Weather data API

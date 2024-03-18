@@ -6,9 +6,10 @@ import { FiSunset } from 'react-icons/fi';
 import { WiBarometer } from 'react-icons/wi';
 import { useState } from 'react';
 import DetailsPageModal from '../details-modal';
+import { memo } from 'react';
 
 /* eslint-disable react/prop-types */
-export const WeatherCard = (props) => {
+const WeatherCard = memo(function WeatherCard(props) {
   const { entry, sunrise, sunset, data } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -77,6 +78,6 @@ export const WeatherCard = (props) => {
       </div>
     </>
   );
-};
+});
 
 export default WeatherCard;
