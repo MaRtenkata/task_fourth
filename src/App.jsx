@@ -20,7 +20,7 @@ function App() {
 
   const uniqueDates = [
     ...new Set(
-      data?.list.map(
+      data.list.map(
         (entry) => new Date(entry.dt * 1000).toISOString().split('T')[0]
       )
     ),
@@ -37,14 +37,18 @@ function App() {
   return (
     <div className='flex flex-col min-h-screen'>
       <Navbar cityName={data.city.name} />
-      {/* 5day forecast */}
+
       <div>
+        <h1 className='text-center text-5xl'>
+          5 Day Forcast for {data.city.name}
+        </h1>
         {firstDataForEachDate.slice(1).map((entry) => {
           return (
             <WeatherCard
+              key={entry.dt}
               sunrise={formatUnixTime(data.city.sunrise)}
               sunset={formatUnixTime(data.city.sunset)}
-              key={entry.dt}
+              data={data}
               entry={entry}
             />
           );
