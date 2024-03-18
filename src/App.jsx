@@ -1,17 +1,17 @@
-import './App.css';
 import Navbar from './components/navbar';
 import WeatherCard from './components/weather-card';
 import { useQuery } from 'react-query';
 import { fetchWeatherData } from './actions/fetchWeatherData.js';
 
 import { formatUnixTime } from './utils/formatUnixTime.js';
-
-const FORECAST_QUERY_KEY = ['weatherForecast'];
+import { useLocationStore } from './hooks/useStore.jsx';
 
 function App() {
+  const location = useLocationStore((state) => state.location);
+
   const { isLoading, error, data } = useQuery(
-    FORECAST_QUERY_KEY,
-    fetchWeatherData
+    ['weatherForecast', location],
+    () => fetchWeatherData(location)
   );
 
   if (isLoading) return 'Loading...';
