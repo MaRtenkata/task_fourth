@@ -11,10 +11,7 @@ const SearchBox = (props) => {
         type='text'
         placeholder='Search location..'
       ></input>
-      <button
-        className='px-4 py-[13px] bg-blue-500 text-white rounded-r-md focus:outline-none hover:bg-blue-600 '
-        type='submit'
-      >
+      <button className='px-4 py-[13px] bg-blue-500 text-white rounded-r-md focus:outline-none hover:bg-blue-600 '>
         <FaSearchLocation />
       </button>
     </form>
