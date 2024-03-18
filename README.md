@@ -45,4 +45,6 @@ The app should now be running on http://localhost:5173
 
 - Make design responsive
 
+- Improve the UI
+
 - Improve the search bar to so that it searches for the correct city
