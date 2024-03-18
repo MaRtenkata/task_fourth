@@ -34,3 +34,15 @@ The app should now be running on http://localhost:5173
 - [axios](https://github.com/axios/axios) - HTTP client
 - [Vite](https://vitejs.dev/) - Build tool
 - [OpenWeatherMap API](https://openweathermap.org/api) - Weather data API
+
+## Thing to improve
+
+- Adding more testing
+
+- Adding more error handling
+
+- Adding more weather data
+
+- Make design responsive
+
+- Improve the search bar to so that it searches for the correct city
