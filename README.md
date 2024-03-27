@@ -37,7 +37,7 @@ The app should now be running on http://localhost:5173
 
 ## Thing to improve
 
-- Adding more testing
+- Adding testing
 
 - Adding more error handling
 
